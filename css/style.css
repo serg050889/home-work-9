@@ -9,6 +9,11 @@ body {
     line-height: 1.64;
 }
 
+img, video, iframe {
+    display: block;
+    max-width: 100%;
+}
+
 .container {
     padding: 0 calc(50vw - 555px);
 }
@@ -155,8 +160,8 @@ body {
 .video:after {
     content: '';
     display: block;
-    width: 1110px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -177,6 +182,8 @@ body {
     background: 0;
     border: none;
     cursor: pointer;
+    width: 100px;
+    height: 100px;
 
 }
 
@@ -204,5 +211,71 @@ body {
 .footer__description {
     font-size: 13px;
     margin: 0;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        padding-left: calc(50vw - 350px);
+        padding-right: calc(50vw - 350px);
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px 16px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        padding-left: calc(50vw - 180px);
+        padding-right: calc(50vw - 180px);
+    }
+
+    .header__menu {
+        flex-wrap: wrap;
+        gap: 20px 50px;
+
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 16px;
+    }
+
+    .offer__title {
+        font-size: 36px;
+        margin: 0 0 30px;
+    }
+
+    .offer {
+        padding-top: 71px;
+        padding-bottom: 71px;
+    }
+
+    .header {
+        padding-top: 40px;
+    }
+
+    .button {
+        padding: 18px 40px;
+    }
+
+
+    .section-title {
+        font-size: 28px;
+        margin: 0 0 30px;
+
+    }
+
+    .video__play {
+
+        width: 50px;
+        height: 50px;
+
+    }
+
 
 }
